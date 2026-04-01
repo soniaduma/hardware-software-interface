@@ -2,45 +2,57 @@
 
 #include <stdio.h>
 
+/**
+ * We will use pointers to elements of different sizes to
+ * facilitate the display of elements of 1, 2, and 4 bytes.
+ */
+
 #include "iterate.h"
 #include "array.h"
 
-void print_chars(void)
-{
-	/**
-	 * TODO: Implement function
-	 */
-	(void) v;
-
-	printf("-------------------------------\n");
-}
 
 void print_shorts(void)
 {
-	/**
-	 * TODO: Implement function
-	 */
-	(void) v;
+	unsigned short *short_ptr = (unsigned short *) &v;
+	unsigned int i;
 
+	/**
+	 * Iterate through 2 bytes at a time, we have only half the steps because we are
+	 * displaying 2 bytes at each step.
+	 */
+	for (i = 0 ; i < sizeof(v) / sizeof((*short_ptr)); ++i) {
+		printf("%p -> 0x%x\n", short_ptr, *short_ptr);
+		++short_ptr;
+	}
 	printf("-------------------------------\n");
 }
 
 void print_ints(void)
 {
+	unsigned int *int_ptr = (unsigned int *) &v;
+	unsigned int i;
 	/**
-	 * TODO: Implement function
+	 * Iterate through 4 bytes at a time, we have only a quarter of the steps because we are
+	 * displaying 4 bytes at each step.
 	 */
-	(void) v;
-
+	for (i = 0 ; i < sizeof(v) / sizeof((*int_ptr)); ++i) {
+		printf("%p -> 0x%x\n", int_ptr, *int_ptr);
+		++int_ptr;
+	}
 	printf("-------------------------------\n");
 }
 
 void print_long_longs(void)
 {
+	unsigned long long *long_long_ptr = (unsigned long long *) &v;
+	unsigned long long i;
 	/**
-	 * TODO: Implement function
+	 * Iterate through 8 bytes at a time, we have only a quarter of the steps because we are
+	 * displaying 8 bytes at each step.
 	 */
-	(void) v;
-
+	for (i = 0 ; i < sizeof(v) / sizeof((*long_long_ptr)); ++i) {
+		printf("%p -> %p\n", long_long_ptr, *long_long_ptr);
+		++long_long_ptr;
+	}
 	printf("-------------------------------\n");
 }

@@ -11,7 +11,7 @@
  */
 int main(void)
 {
-	print_chars();
+	//print_chars();
 	print_shorts();
 	print_ints();
 	print_long_longs();

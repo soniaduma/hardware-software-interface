@@ -10,18 +10,6 @@
 #include "iterate.h"
 #include "array.h"
 
-void print_chars_ref(void)
-{
-	unsigned char *char_ptr = (unsigned char *) &v;
-	unsigned int i;
-
-	/* Iterate through each byte of the array v */
-	for (i = 0 ; i < sizeof(v) / sizeof((*char_ptr)); ++i) {
-		printf("%p -> 0x%x\n", char_ptr, *char_ptr);
-		++char_ptr;
-	}
-	printf("-------------------------------\n");
-}
 
 void print_shorts_ref(void)
 {

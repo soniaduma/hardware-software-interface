@@ -3,7 +3,7 @@
 #ifndef ITERATE_H
 #define ITERATE_H 1
 
-void print_chars(void);
+//void print_chars(void);
 void print_shorts(void);
 void print_ints(void);
 void print_long_longs(void);
