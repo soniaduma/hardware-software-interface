@@ -3,12 +3,12 @@ nav_order: 2
 parent: Lab 11 - Linking
 ---
 
-# Task: Fixing the Entry Point
+# Task: Fixing the Entry Point 2
 
 Access the directory `tasks/entry-fix-2/support/`.
 Run the `make` command, interpret the encountered error, and resolve it by editing the `hello.c` file.
 
-**Checker**: To test the implementation, enter the tests/ directory and run:
+**Checker**: To test the implementation, enter the `tests/` directory and run:
 
 ```console
 ./run_all_tests.sh
