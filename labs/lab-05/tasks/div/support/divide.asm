@@ -17,6 +17,7 @@ section .data
 section .text
 extern printf
 global main
+
 main:
     push rbp
     mov rbp, rsp
